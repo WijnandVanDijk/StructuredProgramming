@@ -2,6 +2,7 @@ import itertools
 import random
 zwart = 0
 wit = 0
+feedback = [zwart, wit]
 
 mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4))
 # bron voor mogelijkheden: https://docs.python.org/3/library/itertools.html
@@ -29,5 +30,10 @@ def geeffeedback(zwart, wit):
     print(feedback)
 
 
-def gok2():
+#def algoritme():
+randomgok()
+
+
+
+
 
