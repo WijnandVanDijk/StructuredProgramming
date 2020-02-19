@@ -3,6 +3,7 @@ import random
 
 
 mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4))
+# bron voor mogelijkheden: https://docs.python.org/3/library/itertools.html
 
 
 def geeffeedback():

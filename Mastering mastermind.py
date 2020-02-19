@@ -30,8 +30,8 @@ def geeffeedback(zwart, wit):
     feedback = [zwart, wit]
     print(feedback)
 
-""""
-def algoritme():
+"""
+def algoritme1():
     for i in mogelijkheden:
         geeffeedback() # geeft elk item een feedback
     if feedback < fb:
@@ -39,8 +39,12 @@ def algoritme():
         mogelijkheden.remove('q') # item wordt verwijderd omdat het een slechtere feedback heeft.
 
     Het werkt niet, ik heb het hele weekend er aan gewerkt om het werkende te krijgen.
-    Maar het is tevergeefs. Ik snap dat als de feedback minder goed is, het item uit de lijst verwijderd moet worden
+    Maar het is tevergeefs. Ik snap dat als de feedback minder goed is, het item uit de lijst verwijderd moet worden.
+    Mijn codering skills laten mij in de steek at the moment, ik werk nog aan mijn programmeer skills.
 """
 
+"""
+def algoritme2()
+    
 
-
+"""
