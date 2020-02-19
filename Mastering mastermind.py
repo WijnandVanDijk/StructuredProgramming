@@ -38,8 +38,8 @@ def algoritme():
         i = 'q' # als de feedback slechter is dan de eerste gok, krijgt het de waarde 'q'
         mogelijkheden.remove('q') # item wordt verwijderd omdat het een slechtere feedback heeft.
 
-    het werkt niet, ik heb het hele weekend er aan gewerkt om het werkende te krijgen.
-    maar het is tevergeefs. ik snap dat als de feedback minder goed is, het item uit de lijst verwijderd moet worden
+    Het werkt niet, ik heb het hele weekend er aan gewerkt om het werkende te krijgen.
+    Maar het is tevergeefs. Ik snap dat als de feedback minder goed is, het item uit de lijst verwijderd moet worden
 """
 
 
