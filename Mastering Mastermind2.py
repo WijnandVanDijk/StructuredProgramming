@@ -7,6 +7,7 @@ mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4)
 
 def geeffeedback():
     code = random.choice(mogelijkheden)
+    sets = 0
     for i in range(0,11):
         zwart = 0
         wit = 0
@@ -21,5 +22,13 @@ def geeffeedback():
 
         feedback = [zwart, wit]
         print(feedback)
+        print(code)
+        if feedback != [4, 0]:
+            sets += 1
+        if feedback == [4, 0]:
+            print('Gefeliciteerd je hebt de code gekraakt in,', sets, 'zetten')
+            quit()
+
+
 
 geeffeedback()
