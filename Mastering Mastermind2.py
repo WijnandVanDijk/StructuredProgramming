@@ -6,6 +6,16 @@ mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4)
 # bron voor mogelijkheden: https://docs.python.org/3/library/itertools.html
 # de computer kiest de code en de speler moet de code raden.
 
+
+def welkom():
+    play = input('Welkom bij mastermind, de computer kiest een code en u moet proberen de code te raden'
+          'als u klaar bent om te spelen typ dan "R", als u niet wilt spelen typ dan "C"') # r voor Ready en c voor cancel
+    if play.capitalize() == 'R':
+        geeffeedback()
+    if play.capitalize() == 'C':
+        quit()
+
+
 def geeffeedback():
     code = random.choice(mogelijkheden)
     sets = 0
@@ -32,4 +42,4 @@ def geeffeedback():
 
 
 
-geeffeedback()
+welkom()
