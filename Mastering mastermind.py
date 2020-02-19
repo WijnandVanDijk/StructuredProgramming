@@ -12,7 +12,7 @@ mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4)
 def randomgok():
     global gok
     gok = random.choice(mogelijkheden)
-    print(gok)
+    print(gok) # print de gok die gedaan is. for testing purposes
     geeffeedback(zwart, wit)
 
 
@@ -48,3 +48,4 @@ def algoritme2()
     
 
 """
+randomgok()
