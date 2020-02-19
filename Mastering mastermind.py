@@ -3,6 +3,7 @@ import random
 zwart = 0
 wit = 0
 feedback = [zwart, wit]
+fb = feedback.copy()
 
 mogelijkheden = list(itertools.product(['a', 'b', 'c', 'd', 'e', 'f'], repeat=4))
 # bron voor mogelijkheden: https://docs.python.org/3/library/itertools.html
@@ -29,11 +30,17 @@ def geeffeedback(zwart, wit):
     feedback = [zwart, wit]
     print(feedback)
 
+""""
+def algoritme():
+    for i in mogelijkheden:
+        geeffeedback() # geeft elk item een feedback
+    if feedback < fb:
+        i = 'q' # als de feedback slechter is dan de eerste gok, krijgt het de waarde 'q'
+        mogelijkheden.remove('q') # item wordt verwijderd omdat het een slechtere feedback heeft.
 
-#def algoritme():
-randomgok()
-
-
+    het werkt niet, ik heb het hele weekend er aan gewerkt om het werkende te krijgen.
+    maar het is tevergeefs. ik snap dat als de feedback minder goed is, het item uit de lijst verwijderd moet worden
+"""
 
 
 
