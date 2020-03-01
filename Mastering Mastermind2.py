@@ -16,7 +16,7 @@ def welkom():
         quit()
 
 
-def geeffeedback():
+def geef_feedback():
     code = random.choice(mogelijkheden)
     sets = 0
     for i in range(0,11):
