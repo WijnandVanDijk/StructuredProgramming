@@ -3,10 +3,10 @@ import random
 
 con = psycopg2.connect(
     host='Localhost',
-    database='postgres2',
+    database='postgres4',
     user='postgres',
     password='postgres',
-    port=5432)
+    port=5432) #TODO: edit this.
 cur = con.cursor()
 
 """
@@ -107,6 +107,7 @@ def fill_table():
     cur.execute('select id, PRODUCT1, PRODUCT2, PRODUCT3, PRODUCT4, PRODUCT5 from prijs_aanbevelingen')
     x = cur.fetchall()
     print(x)
+    print('Hier boven staat een lijst met getallen, ieder getal is een product. Het eerste product van de zes is het product waar de aanbeveling voor gegeven worden, de andere vijf zijn de aanbevelingen')
 
     con.commit()
 
