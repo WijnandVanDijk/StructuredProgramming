@@ -40,13 +40,15 @@ def fill_table(): # vergeet niet de database te refreshen iedere keer als u een 
                         '\nVergeet ook niet de database te refreshen voor de zekerheid. ')
         print('De tabel wordt gevuld, even geduld aub. (Dit kan een paar minuten duren)')
         cur.execute("""select l.profid, l.prodid, pr.segment, r.name, r.category, r.subcategory, r.subsubcategory, r.targetaudience
-        from profiles_previously_viewed as L inner join profiles as Pr on l.profid = pr.id
+        from profiles_previously_viewed as L 
+        inner join profiles as Pr on l.profid = pr.id
         inner join products as r on l.prodid = r.id
         where segment = '{}'
         order by profid desc,
         prodid desc
         """.format(segment))
         table = cur.fetchall()
+        # print(table) testing purpose
         lijst=[]
         for row in table:
             profid = row[0]
