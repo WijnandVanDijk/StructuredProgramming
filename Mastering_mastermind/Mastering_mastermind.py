@@ -1,7 +1,6 @@
 import itertools
 import math
 
-
 def welkom():  # start de game, verwijst door naar andere functies
     print("Welkom bij het spel Mastermind! \n"
           "als u klaar bent om te spelen klik typ dan 'R'!")
@@ -14,7 +13,6 @@ def welkom():  # start de game, verwijst door naar andere functies
         quit()
     if ready != "R":
         quit()
-
 
 def game_mode():  # gamemode selecter, 4 of 5 lange code. (voor herkansing)
     print('Kies hier een gamemode: \n'
@@ -29,7 +27,6 @@ def game_mode():  # gamemode selecter, 4 of 5 lange code. (voor herkansing)
         geef_code_5(deCode)
         algoritme_5()
 
-
 def geef_code_4(y):  # Hier moet de speler de code invoeren, die de computer gaat proberen te kraken.
     # deze wordt gebruikt als de gebruiker voor de 4 lange code kiest
     print("Geef een code die de computer gaat proberen te kraken. \n"
@@ -40,7 +37,6 @@ def geef_code_4(y):  # Hier moet de speler de code invoeren, die de computer gaa
     for i in range(len(x)):
         y.append(x[i])
     return y
-
 
 def geef_code_5(y):  # Hier moet de speler de code invoeren, die de computer gaat proberen te kraken.
     # deze wordt gebruikt als de gebruiker voor de 4 lange code kiest
@@ -53,14 +49,12 @@ def geef_code_5(y):  # Hier moet de speler de code invoeren, die de computer gaa
         y.append(x[i])
     return y
 
-
 def win_check(y, x):  # kijkt of de code gekraakt is of niet.
     if x == y:
         print("De computer heeft de code gekraakt! Volgende keer beter. :c")
         exit()
     else:
         print("De computer heeft nog niet de code gekraakt! Goed bezig!")
-
 
 def geef_feedback(y, x):  # deze functie geeft feedback op de code die de computer heeft geprobeerd.
     # wit als de kleur wel in de code zit maar niet op die plek,
@@ -79,19 +73,16 @@ def geef_feedback(y, x):  # deze functie geeft feedback op de code die de comput
     for i in range(len(x)):
         if gok[i] != code[i] and gok[i] in code:
             wit += 1
-            z = code.index(gok[i])
-            code[z] = 0
+            code[i] = 0
             gok[i] = 1
 
     feedback = [zwart, wit]
     return feedback
 
-
 deCode = []
 kleuren = ['blauw', 'geel', 'rood', 'oranje', 'groen', 'paars']
 # mogelijkheden = list(itertools.product(['blauw', 'geel', 'rood', 'oranje', 'groen', 'paars'], repeat=4))
 # dit ^^ werkte niet door de opbouw van de list die gemaakt werd
-
 
 def mogelijkheden_4(): # deze functie maakt de mogelijkheden voor de standaard optie van het spel, een code van 4 lang dus
     # 1296 lang.
@@ -107,7 +98,6 @@ def mogelijkheden_4(): # deze functie maakt de mogelijkheden voor de standaard o
                 kleuren[index0] + " " + kleuren[index1] + " " + kleuren[index2] + " " + kleuren[index3]).split(" ")
         mogelijkheden.append([losse_combos])
     return mogelijkheden
-
 
 def mogelijkheden_5(): # deze functie maakt de mogelijkheden voor de 5 lange code.
     # 7776 lang, er is dus een grotere kans dat de computer het fout heeft
@@ -126,14 +116,12 @@ def mogelijkheden_5(): # deze functie maakt de mogelijkheden voor de 5 lange cod
         mogelijkheden.append([losse_combos])
     return mogelijkheden
 
-
 def moeilijkheid(): # hier kan de speler kiezen hoeveel kansen de computer krijgt om de code te kraken.
     # met minder kansen is de kans kleiner dat de computer het kraakt.
     kansenAI = input("Hoeveel kansen wilt u de AI geven om de code te kraken? "
                      "Met minder kansen is de kans dat de AI het raad kleiner. ")
     print(kansenAI)
     return kansenAI
-
 
 def algoritme_4(): # 'A Simple Strategy' algoritme uit het artikel van Universiteit Groningen. Voor de 4 lange code.
     kansen_ai = moeilijkheid()
@@ -156,7 +144,6 @@ def algoritme_4(): # 'A Simple Strategy' algoritme uit het artikel van Universit
 
     print("De computer heeft de code niet gekraakt! U heeft een goede code gemaakt!")
 
-
 def algoritme_5(): # 'A Simple Strategy' algoritme uit het artikel van Universiteit Groningen. Voor de 5 lange code.
     kansen_ai = moeilijkheid()
     mogelijk = mogelijkheden_5()
@@ -177,6 +164,5 @@ def algoritme_5(): # 'A Simple Strategy' algoritme uit het artikel van Universit
             mogelijk.remove(0)
 
     print("De computer heeft de code niet gekraakt! U heeft een goede code gemaakt!")
-
 
 welkom()
