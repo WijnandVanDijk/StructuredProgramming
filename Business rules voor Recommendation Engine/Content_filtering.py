@@ -106,7 +106,7 @@ def fill_table():
     # zijn de aanbevolen producten op basis van de prijs van het geselecteerde product
     cur.execute('select id, PRODUCT1, PRODUCT2, PRODUCT3, PRODUCT4, PRODUCT5 from prijs_aanbevelingen')
     x = cur.fetchall()
-    print(x)
+    print(random.choice(x))
     print('Hier boven staat een lijst met getallen, ieder getal is een product. Het eerste product van de zes is het product waar de aanbeveling voor gegeven worden, de andere vijf zijn de aanbevelingen')
 
     con.commit()
