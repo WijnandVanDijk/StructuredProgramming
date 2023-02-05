@@ -13,6 +13,7 @@ def welkom():  # start de game, verwijst door naar andere functies
         quit()
     if ready != "R":
         quit()
+        
 
 def game_mode():  # gamemode selecter, 4 of 5 lange code. (voor herkansing)
     print('Kies hier een gamemode: \n'
